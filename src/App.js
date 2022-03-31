@@ -10,11 +10,14 @@ function App() {
   //https://api.giphy.com/v1/gifs/search?q=zain&api_key=J50GUocJ7bqHKPv807g9I10AydOK1DX1
   
   function fetchGifs(event){
+    setData([]);
     event.preventDefault();
     fetch("https://api.giphy.com/v1/gifs/search?q=cars&api_key=J50GUocJ7bqHKPv807g9I10AydOK1DX1")
     .then(response => response.json())
     .then(data => setData(data.data));
   }
+
+  let arr = data.map(data => <img src={data.url}></img>);
 
   return (
     
@@ -24,6 +27,7 @@ function App() {
    <form onSubmit={fetchGifs}>
    <input type="text"/>
    </form>
+    {arr}
    </>
   );
 }
