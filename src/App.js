@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
 
 function App() {
+  const [data, setData] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
+  const [url, setUrl] = useState("");
+
+  //API call
+  //https://api.giphy.com/v1/gifs/search?q=zain&api_key=J50GUocJ7bqHKPv807g9I10AydOK1DX1
+  
+  function fetchGifs(event){
+    event.preventDefault();
+    fetch("https://api.giphy.com/v1/gifs/search?q=cars&api_key=J50GUocJ7bqHKPv807g9I10AydOK1DX1")
+    .then(response => response.json())
+    .then(data => setData(data.data));
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+   <>
+
+   <h1>Gifs on Gifs</h1>
+   <form onSubmit={fetchGifs}>
+   <input type="text"/>
+   </form>
+   </>
   );
 }
 
