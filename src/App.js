@@ -2,22 +2,22 @@ import './App.css';
 import {useState} from 'react';
 
 function App() {
-  const [data, setData] = useState([]);
+  const [gifsList, setGifs] = useState([]);
   const [searchInput, setSearchInput] = useState("");
-  const [url, setUrl] = useState("");
 
-  //API call
-  //https://api.giphy.com/v1/gifs/search?q=zain&api_key=J50GUocJ7bqHKPv807g9I10AydOK1DX1
+  function updateSearch(event){
+    setSearchInput(event.target.value);
+  }
   
   function fetchGifs(event){
-    setData([]);
+    setGifs([]);
     event.preventDefault();
-    fetch("https://api.giphy.com/v1/gifs/search?q=cars&api_key=J50GUocJ7bqHKPv807g9I10AydOK1DX1")
+    fetch(`https://api.giphy.com/v1/gifs/search?q=${searchInput}&api_key=J50GUocJ7bqHKPv807g9I10AydOK1DX1`)
     .then(response => response.json())
-    .then(data => setData(data.data));
-  }
+    .then(data => setGifs(data.data.map(data => <img className='gifs' src={data.images.original.url}></img>)));
 
-  let arr = data.map(data => <img src={data.url}></img>);
+    
+  }// End of the fetchGifs function
 
   return (
     
@@ -25,9 +25,10 @@ function App() {
 
    <h1>Gifs on Gifs</h1>
    <form onSubmit={fetchGifs}>
-   <input type="text"/>
+   <input onChange={updateSearch} type="text"/>
+   <button>Search</button>
    </form>
-    {arr}
+    {gifsList}
    </>
   );
 }
