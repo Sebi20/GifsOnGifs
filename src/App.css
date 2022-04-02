@@ -1,3 +1,43 @@
+body{
+    scroll-behavior: smooth;
+    background-color: rgb(66, 61, 61);
+}
+
+.input-fld{
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 5px;
+    background-color: rgba(224, 125, 206, 0.4);
+    color: aliceblue;
+}
+
 .gifs{
-    margin: 2px;
+    margin: 10px;
+    border-radius: 5px;
+    max-width: 400px;
+    border: 1px aliceblue solid;
+}
+
+.gifsongifs{
+    text-align: center;
+    animation: colorChange 4s infinite;
+}
+
+@keyframes colorChange {
+    0%{color: aliceblue;}
+    25%{color: coral;}
+    50%{color: cadetblue;}
+    75%{color: cornflowerblue;}
+    100%{color: hotpink;}
+}
+
+.searchField{
+    text-align: center;
+}
+
+.gifContainer{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 450px 450px 450px;
+    justify-content: center;
 }
