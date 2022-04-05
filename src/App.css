@@ -1,13 +1,17 @@
 body{
     scroll-behavior: smooth;
-    background-color: rgb(66, 61, 61);
+    background-color: rgb(44, 43, 43);
 }
 
 .input-fld{
     padding: 5px;
     border-radius: 10px;
     margin-right: 5px;
-    background-color: rgba(224, 125, 206, 0.4);
+    background-color: rgb(105, 108, 106);
+    color: aliceblue;
+}
+
+.input-fld::placeholder{
     color: aliceblue;
 }
 
