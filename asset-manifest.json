@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GifsOnGifs/static/css/main.8de3a923.css",
+    "main.js": "/GifsOnGifs/static/js/main.6f7add0e.js",
+    "index.html": "/GifsOnGifs/index.html",
+    "main.8de3a923.css.map": "/GifsOnGifs/static/css/main.8de3a923.css.map",
+    "main.6f7add0e.js.map": "/GifsOnGifs/static/js/main.6f7add0e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8de3a923.css",
+    "static/js/main.6f7add0e.js"
+  ]
+}
