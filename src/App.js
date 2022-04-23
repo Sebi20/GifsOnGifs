@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 function App() {
   const [gifsList, setGifs] = useState([]);
@@ -7,21 +7,26 @@ function App() {
   let input = document.getElementsByClassName("input-fld");
 
   function updateSearch(event){
+    event.preventDefault();
     setSearchInput(event.target.value);
   }
   
-  function fetchGifs(event){
+
+  const fetchGifs = async (event) =>{
     setGifs([]);
     event.preventDefault();
-    fetch(`https://api.giphy.com/v1/gifs/search?q=${searchInput}&api_key=J50GUocJ7bqHKPv807g9I10AydOK1DX1`)
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-      setGifs(data.data.map(data => <img className='gifs' src={data.images.original.url}></img>))
-    });
+    const data = await fetch(`https://api.giphy.com/v1/gifs/search?q=${searchInput}&api_key=J50GUocJ7bqHKPv807g9I10AydOK1DX1`);
+    const gifs = await data.json();
+    console.log(gifs);
+    setGifs(gifs.data.map(data => <img className='gifs' src={data.images.original.url}></img>));
     setSearchInput("");
-    
-  }// End of the fetchGifs function
+  }
+
+  useEffect((event)=>{
+    fetchGifs(event);
+  }, []);
+
+   
 
   return (
     
