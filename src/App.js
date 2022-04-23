@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react';
 function App() {
   const [gifsList, setGifs] = useState([]);
   const [searchInput, setSearchInput] = useState("");
+  const [term, setTerm] = useState("");
   let input = document.getElementsByClassName("input-fld");
 
   function updateSearch(event){
@@ -19,6 +20,7 @@ function App() {
     const gifs = await data.json();
     console.log(gifs);
     setGifs(gifs.data.map(data => <img className='gifs' src={data.images.original.url}></img>));
+    setTerm(`The current search is for: ${searchInput}`);
     setSearchInput("");
   }
 
@@ -37,6 +39,8 @@ function App() {
    <input className='input-fld' onChange={updateSearch} placeholder="Search for gif..." type="text" value={searchInput}/>
    <button>Search</button>
    </form>
+
+   <h3 className='userSearchTerm'>{term}</h3>
    <div className='gifContainer'>
    {gifsList}
    </div>

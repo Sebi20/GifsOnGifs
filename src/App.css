@@ -45,3 +45,8 @@ body{
     grid-template-columns: 450px 450px 450px;
     justify-content: center;
 }
+
+.userSearchTerm{
+    color: aliceblue;
+    text-align: center;
+}
