@@ -1,0 +1,14 @@
+.content{
+    display: grid;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.gif{
+    border-radius: 5px;
+    border: 1px solid aliceblue;
+}
+
+.underGif{
+    color: aliceblue;
+}
