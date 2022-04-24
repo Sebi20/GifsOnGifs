@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     <Routes>
-        <Route path="/" element={<Search />}/>
+        <Route path="/GifsOnGifs" element={<Search />}/>
         <Route path="/gif" element={<Gif />}/>
       </Routes>
     </>
