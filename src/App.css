@@ -18,7 +18,7 @@ body{
 .gifs{
     margin: 10px;
     border-radius: 5px;
-    width: 470px;
+    width: 450px;
     height: 402px;
     border: 1px aliceblue solid;
 }
@@ -43,7 +43,7 @@ body{
 .gifContainer{
     margin-top: 30px;
     display: grid;
-    grid-template-columns: 450px 450px 450px;
+    grid-template-columns: 470px 470px 470px;
     justify-content: center;
 }
 
