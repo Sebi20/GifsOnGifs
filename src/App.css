@@ -18,7 +18,8 @@ body{
 .gifs{
     margin: 10px;
     border-radius: 5px;
-    max-width: 400px;
+    width: 402px;
+    height: 402px;
     border: 1px aliceblue solid;
 }
 
@@ -49,4 +50,8 @@ body{
 .userSearchTerm{
     color: aliceblue;
     text-align: center;
+}
+
+.searchTerm{
+    color: coral;
 }
