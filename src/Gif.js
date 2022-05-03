@@ -7,14 +7,18 @@ function Gif(prop){
     
     
     return (
-        <div className='content'>
-        <img className='gif' src={location.state.img}></img>
-        <div className='underGif'>
-            <p>{location.state.title}</p>
-            <p>Rated: {location.state.rating}</p>
-            <a href='public/images/downloadIcon.png'></a>
-        </div>
-        </div>
+        <>
+
+            <h1 className='gifsongifs'>Gifs on Gifs</h1>
+            <div className='content'>
+                <img className='gif' src={location.state.img}></img>
+                <div className='underGif'>
+                    <p>{location.state.title}</p>
+                    <p>Rated: {location.state.rating}</p>
+                    <a href='public/images/downloadIcon.png'></a>
+                </div>
+            </div>
+        </>
     )
 }
 

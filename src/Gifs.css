@@ -7,8 +7,23 @@
 .gif{
     border-radius: 5px;
     border: 1px solid aliceblue;
+    width: 700px;
+    height: 600px;
 }
 
 .underGif{
     color: aliceblue;
+}
+
+.gifsongifs{
+    text-align: center;
+    animation: colorChange 4s infinite;
+}
+
+@keyframes colorChange {
+    0%{color: aliceblue;}
+    25%{color: coral;}
+    50%{color: cadetblue;}
+    75%{color: cornflowerblue;}
+    100%{color: hotpink;}
 }

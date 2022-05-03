@@ -4,31 +4,42 @@ import axios from 'axios'
 import {Link, useLocation, useNavigate} from 'react-router-dom';
 
 function Search() {
-  const [gifsList, setGifs] = useState([]);
+  const [gifsList, setGifs] = useState(JSON.parse(sessionStorage.getItem("gifs")));
   const [searchInput, setSearchInput] = useState("");
-  const [term, setTerm] = useState("");
+  const [term, setTerm] = useState(sessionStorage.getItem("term"));
   let input = document.getElementsByClassName("input-fld");
 
+  // This function sets the new search input when a user types in the input field
   function updateSearch(event){
     event.preventDefault();
     setSearchInput(event.target.value);
   }
   
-
+  // This function fetches the api with the search input added(for specific searching)
+  // Adds the new gfs to the session storage and sets the new gifs to the gifsList
   const fetchGifs = async (event) =>{
+    if(searchInput == ""){
+      return;
+    }
+
     setGifs([]);
     event.preventDefault();
 
     const res = await axios.get(`https://api.giphy.com/v1/gifs/search?q=${searchInput}&api_key=J50GUocJ7bqHKPv807g9I10AydOK1DX1`);
     
+    sessionStorage.setItem("gifs", JSON.stringify(res.data.data));
+    
     setGifs(res.data.data);
-    setTerm(searchInput); 
+    setTerm(searchInput);
     setSearchInput("");
-  }
+  }// End of the fetchGifs function
 
   useEffect((event)=>{
     fetchGifs(event);
   }, []);
+
+  //Setting the term in session storage to be the new term that was just searched
+  sessionStorage.setItem("term", term);
 
   const gifs = gifsList.map(gifs =>{
 
