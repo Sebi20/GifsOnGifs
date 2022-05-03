@@ -9,7 +9,7 @@ function Gif(prop){
     return (
         <>
 
-            <h1 className='gifsongifs'>Gifs on Gifs</h1>
+            <Link to={"/GifsOnGifs"}><h1 className='gifsongifs'>Gifs on Gifs</h1></Link>
             <div className='content'>
                 <img className='gif' src={location.state.img}></img>
                 <div className='underGif'>

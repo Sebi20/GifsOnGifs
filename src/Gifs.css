@@ -18,6 +18,7 @@
 .gifsongifs{
     text-align: center;
     animation: colorChange 4s infinite;
+    text-decoration: none;
 }
 
 @keyframes colorChange {
