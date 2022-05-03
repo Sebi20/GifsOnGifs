@@ -4,7 +4,8 @@ import axios from 'axios'
 import {Link, useLocation, useNavigate} from 'react-router-dom';
 
 function Search() {
-  const [gifsList, setGifs] = useState(JSON.parse(sessionStorage.getItem("gifs")));
+  
+  const [gifsList, setGifs] = useState(JSON.parse(sessionStorage.getItem("gifs")) || []);
   const [searchInput, setSearchInput] = useState("");
   const [term, setTerm] = useState(sessionStorage.getItem("term"));
   let input = document.getElementsByClassName("input-fld");
