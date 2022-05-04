@@ -18,7 +18,12 @@
 .gifsongifs{
     text-align: center;
     animation: colorChange 4s infinite;
-    text-decoration: none;
+    color: inherit;
+    
+}
+
+.linkToHome{
+    text-decoration-line: none;
 }
 
 @keyframes colorChange {
