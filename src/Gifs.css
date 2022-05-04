@@ -1,14 +1,14 @@
 .content{
     display: grid;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 .gif{
     border-radius: 5px;
     border: 1px solid aliceblue;
-    width: 700px;
-    height: 600px;
+    width: 500px;
+    height: 400px;
 }
 
 .underGif{
@@ -32,4 +32,19 @@
     50%{color: cadetblue;}
     75%{color: cornflowerblue;}
     100%{color: hotpink;}
+}
+
+.title{
+    font-weight: 800;
+    font-size: large;
+}
+
+.rating{
+    color: coral;
+    font-weight: 800;
+    font-size: large;
+}
+
+.back-btn{
+    text-align: center;
 }
