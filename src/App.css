@@ -55,3 +55,21 @@ body{
 .searchTerm{
     color: coral;
 }
+
+@media only screen and (max-width: 500px) {
+
+    .gifContainer{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 300px;
+        justify-content: center;
+    }
+
+    .gifs{
+        margin: 10px;
+        border-radius: 5px;
+        width: 300px;
+        height: 200px;
+        border: 1px aliceblue solid;
+    }
+  }
