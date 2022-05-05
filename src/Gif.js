@@ -1,6 +1,8 @@
 import React from 'react';
 import {useLocation, Link} from "react-router-dom"
 import './Gifs.css'
+import downloadIcon from './images/downloadIcon.png'
+
 
 function Gif(prop){
     const location = useLocation();
@@ -11,21 +13,18 @@ function Gif(prop){
 
     //Gets the rating and sets it to uppercase
     let rating = location.state.rating.toUpperCase();
-    
-    
+
     return (
         <>
 
             <Link className="linkToHome" to={"/GifsOnGifs"} underline="none"><h1 className='gifsongifs'>Gifs on Gifs</h1></Link>
 
-            {/* <h4 className='back-btn'>{"<-"}Back</h4> */}
-
             <div className='content'>
-                <img className='gif' src={location.state.img}></img>
+                <img className='gif' src={location.state.img} alt=""></img>
                 <div className='underGif'>
                     <p className='title'>{title}</p>
                     <p className='rating'>Rated: {rating}</p>
-                    <a href='public/images/downloadIcon.png'></a>
+                    <a href={location.state.img} download={title}><img className='download' src={downloadIcon} ></img></a>
                 </div>
             </div>
         </>
