@@ -14,6 +14,7 @@ function Gif(prop){
     //Gets the rating and sets it to uppercase
     let rating = location.state.rating.toUpperCase();
 
+
     return (
         <>
 
