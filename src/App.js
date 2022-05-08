@@ -7,9 +7,9 @@ function App() {
 
   return (
     <>
-    <Routes>
-        <Route path="/GifsOnGifs" element={<Search />}/>
-        <Route path="/gif" element={<Gif />}/>
+      <Routes>
+          <Route path="/GifsOnGifs" element={<Search />} component={<Search/>}/>
+          <Route path="/GifsOnGifs/gif" element={<Gif />} component={<Gif/>}/>
       </Routes>
     </>
   );

@@ -14,6 +14,24 @@ function Gif(prop){
     //Gets the rating and sets it to uppercase
     let rating = location.state.rating.toUpperCase();
 
+    let imageURL;
+
+    const downloadSelected = async () => {
+       
+         let image = await fetch(location.state.img)
+         let blob = await image.blob()
+         imageURL = URL.createObjectURL(blob)
+    
+
+        console.log(imageURL);
+
+
+      }
+
+      downloadSelected();
+
+
+
 
     return (
         <>
@@ -25,7 +43,7 @@ function Gif(prop){
                 <div className='underGif'>
                     <p className='title'>{title}</p>
                     <p className='rating'>Rated: {rating}</p>
-                    <a href={location.state.img} download={title}><img className='download' src={downloadIcon} ></img></a>
+                    <a href={imageURL} download={title}><img className='download' src={downloadIcon} ></img></a>
                 </div>
             </div>
         </>
