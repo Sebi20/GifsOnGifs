@@ -44,7 +44,7 @@ function Gif(prop){
             <Link className="linkToHome" to={"/GifsOnGifs"} underline="none"><h1 className='gifsongifs'>Gifs on Gifs</h1></Link>
 
             <div className='content'>
-                <img className='gif' src={gif} alt=""></img>
+                <img className='gif' src={location.state.img} alt=""></img>
                 <div className='underGif'>
                     <p className='title'>{title}</p>
                     <p className='rating'>Rated: {rating}</p>
