@@ -41,7 +41,7 @@ function Gif(prop){
     return (
         <>
 
-            <Link className="linkToHome" to={"/GifsOnGifs"} underline="none"><h1 className='gifsongifs'>Gifs on Gifs</h1></Link>
+            <Link className="linkToHome" to={"/"} underline="none"><h1 className='gifsongifs'>Gifs on Gifs</h1></Link>
 
             <div className='content'>
                 <img className='gif' src={location.state.img} alt=""></img>
@@ -50,6 +50,8 @@ function Gif(prop){
                     <p className='rating'>Rated: {rating}</p>
                     <img className='download' onClick={downloadSelected} src={downloadIcon} ></img>
                 </div>
+
+                <Link className='favPageLink' to={'/fav'}>Check out your favorite gifs→</Link>
             </div>
         </>
     )
