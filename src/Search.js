@@ -47,7 +47,7 @@ function Search() {
     return (
       <div>
 
-       <Link to= {'/GifsOnGifs/gif'} state={{
+       <Link to= {'/gif'} state={{
            img: gifs.images.original.url,
            title: gifs.title,
            rating: gifs.rating

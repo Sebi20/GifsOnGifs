@@ -8,8 +8,8 @@ function App() {
   return (
     <>
       <Routes>
-          <Route path="/GifsOnGifs" element={<Search />} component={<Search/>}/>
-          <Route path="/GifsOnGifs/gif" element={<Gif />} component={<Gif/>}/>
+          <Route path="/" element={<Search />} component={<Search/>}/>
+          <Route path="/gif" element={<Gif />} component={<Gif/>}/>
       </Routes>
     </>
   );
