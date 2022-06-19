@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/GifsOnGifs/static/css/main.0efca463.css",
-    "main.js": "/GifsOnGifs/static/js/main.e4e815ed.js",
+    "main.js": "/GifsOnGifs/static/js/main.8cbcff54.js",
     "index.html": "/GifsOnGifs/index.html",
     "main.0efca463.css.map": "/GifsOnGifs/static/css/main.0efca463.css.map",
-    "main.e4e815ed.js.map": "/GifsOnGifs/static/js/main.e4e815ed.js.map"
+    "main.8cbcff54.js.map": "/GifsOnGifs/static/js/main.8cbcff54.js.map"
   },
   "entrypoints": [
     "static/css/main.0efca463.css",
-    "static/js/main.e4e815ed.js"
+    "static/js/main.8cbcff54.js"
   ]
 }
