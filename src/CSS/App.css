@@ -75,6 +75,6 @@ body{
   }
 
   .eachGifContent{
-    background-color: teal;
+    /* background-color: teal; */
     border-radius: 10px;
   }
