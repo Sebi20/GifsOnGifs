@@ -1,4 +1,4 @@
-import './App.css';
+import '../CSS/App.css';
 import {useState, useEffect} from 'react';
 import axios from 'axios'
 import {Link, useLocation, useNavigate} from 'react-router-dom';
@@ -45,7 +45,7 @@ function Search() {
   const gifs = gifsList.map(gifs =>{
 
     return (
-      <div>
+      <div className='eachGifContent'>
 
        <Link to= {'/gif'} state={{
            img: gifs.images.original.url,

@@ -1,8 +1,8 @@
-import './App.css';
+import '../CSS/App.css';
 import {Routes, Route} from 'react-router-dom';
 import Search from './Search';
-import Gif from './Gif'
-import Favorite from './Favorite'
+import Gif from './Gif';
+import Favorite from './Favorite';
 
 
 function App() {

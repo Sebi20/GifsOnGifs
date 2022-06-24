@@ -73,3 +73,8 @@ body{
         border: 1px aliceblue solid;
     }
   }
+
+  .eachGifContent{
+    background-color: teal;
+    border-radius: 10px;
+  }

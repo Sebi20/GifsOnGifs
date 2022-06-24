@@ -1,8 +1,8 @@
 import React from 'react';
 import {useLocation, Link} from "react-router-dom"
 import {useState} from 'react'
-import './Gifs.css'
-import downloadIcon from './images/downloadIcon.png'
+import '../CSS/Gifs.css'
+import downloadIcon from '../images/downloadIcon.png'
 
 
 function Gif(prop){

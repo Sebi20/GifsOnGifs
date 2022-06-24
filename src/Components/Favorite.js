@@ -1,5 +1,6 @@
 import react from 'react'
-import './Favorite.css';
+import {useState} from 'react';
+import '../CSS/Favorite.css';
 import {Link} from "react-router-dom"
 
 function Favorite(){
