@@ -2,6 +2,8 @@ import '../CSS/App.css';
 import {useState, useEffect} from 'react';
 import axios from 'axios'
 import {Link, useLocation, useNavigate} from 'react-router-dom';
+import Hear from './Heart'
+import Heart from './Heart';
 
 function Search() {
   
@@ -46,13 +48,12 @@ function Search() {
 
     return (
       <div className='eachGifContent'>
-
        <Link to= {'/gif'} state={{
            img: gifs.images.original.url,
            title: gifs.title,
            rating: gifs.rating
        }}><img className='gifs' src={gifs.images.original.url}></img></Link>
-
+         <div className='heartContainer'><Heart/></div>
       </div>
     )
 

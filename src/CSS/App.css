@@ -78,3 +78,7 @@ body{
     /* background-color: teal; */
     border-radius: 10px;
   }
+
+  .heartContainer{
+    text-align: center;
+  }
