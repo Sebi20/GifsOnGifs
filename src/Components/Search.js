@@ -54,11 +54,10 @@ function Search() {
            rating: gifs.rating
        }}>
         <Gif 
-        img = {gifs.images.original.url}
+          img = {gifs.images.original.url}
         />
-        {/* <img className='gifs' src={gifs.images.original.url}></img> */}
+        
         </Link>
-         <div className='heartContainer'><Heart/></div>
       </div>
     )
 

@@ -1,5 +1,6 @@
 import {UseState} from 'react'
-import '../CSS/GifDisplay.css'
+import '../CSS/Gif.css'
+import Heart from './Heart';
 
 
 function Gif(prop){
@@ -7,7 +8,8 @@ function Gif(prop){
 
     return(
         <>
-        <img src={prop.img}></img>
+            <img className='gifs' src={prop.img}></img> 
+            <div className='heartContainer'><Heart/></div>
         </>
     )
 }
