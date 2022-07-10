@@ -12,7 +12,7 @@ function Heart(){
         }else{
             setHeart(clicked);
         }
-    }
+    } 
 
     return(
         <>

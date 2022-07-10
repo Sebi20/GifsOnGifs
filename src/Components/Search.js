@@ -48,16 +48,13 @@ function Search() {
 
     return (
       <div className='eachGifContent'>
-       <Link to= {'/gifdisplay'} state={{
-           img: gifs.images.original.url,
-           title: gifs.title,
-           rating: gifs.rating
-       }}>
+       
         <Gif 
           img = {gifs.images.original.url}
+          title = {gifs.title}
+          rating = {gifs.rating}
         />
-        
-        </Link>
+    
       </div>
     )
 
