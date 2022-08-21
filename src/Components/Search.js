@@ -71,7 +71,7 @@ function Search() {
       <button>Search</button>
 
     </form>
-    <Link className='favPageLink' to={'/fav'}><h4>Favorite's page→</h4></Link>
+    {/* <Link className='favPageLink' to={'/fav'}><h4>Favorite's page→</h4></Link> */}
 
     <h3 className='userSearchTerm'>The current search is for: <span className='searchTerm'>{term}</span></h3>
     <div className='gifContainer'>

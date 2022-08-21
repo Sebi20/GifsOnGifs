@@ -17,7 +17,7 @@ function Gif(prop){
         
             </Link>
 
-            <div className='heartContainer'><Heart/></div>
+            {/* <div className='heartContainer'><Heart/></div> */}
         </>
     )
 }

@@ -50,7 +50,7 @@ function GifDisplay(prop){
                     <img className='download' onClick={downloadSelected} src={downloadIcon} ></img>
                 </div>
 
-                <Link className='favPageLink' to={'/fav'}>Check out your favorite gifs→</Link>
+                {/* <Link className='favPageLink' to={'/fav'}>Check out your favorite gifs→</Link> */}
             </div>
         </>
     )
